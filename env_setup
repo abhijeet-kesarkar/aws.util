@@ -1,5 +1,5 @@
 curl -O http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz
-gzip -d http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz
+gzip -d node-v0.12.4-linux-x64.tar.gz
 tar -xvf node-v0.12.4-linux-x64.tar
 sudo mv node-v0.12.4-linux-x64 /opt/node
 sed -i 's/export PATH/PATH=$PATH:\/opt\/node\/bin\nexport PATH/' ~/.bash_profile
