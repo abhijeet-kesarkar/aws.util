@@ -1,10 +1,14 @@
-curl -O http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz
+wget http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz
 gzip -d node-v0.12.4-linux-x64.tar.gz
 tar -xvf node-v0.12.4-linux-x64.tar
 sudo mv node-v0.12.4-linux-x64 /opt/node
-sed -i 's/export PATH/PATH=$PATH:\/opt\/node\/bin\nexport PATH/' ~/.bash_profile
+sudo sed -i 's/export PATH/PATH=$PATH:\/opt\/node\/bin\nexport PATH/' ~/.bash_profile
 
-curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-3.0.3.tgz
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-3.0.3.tgz
 tar -xvf mongodb-linux-x86_64-rhel70-3.0.3.tgz
 sudo mv mongodb-linux-x86_64-rhel70-3.0.3 /opt/mongodb
-sed -i 's/export PATH/PATH=$PATH:\/opt\/mongodb\/bin\nexport PATH/' ~/.bash_profile
+sudo sed -i 's/export PATH/PATH=$PATH:\/opt\/mongodb\/bin\nexport PATH/' ~/.bash_profile
+
+
+wget  http://dl.bintray.com/gocd/gocd-rpm/go-server-15.1.0-1863.noarch.rpm
+wget http://download.go.cd/gocd-rpm/go-agent-15.1.0-1863.noarch.rpm
